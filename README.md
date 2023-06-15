@@ -1,4 +1,5 @@
 <a name="readme-top"></a>
+
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -26,7 +27,7 @@
 
 # 📖 [VANILLA NODE.JS REST API] <a name="about-project"></a>
 
-> A simple Vanilla node.js REST API App with CRUD operations.
+> A simple Vanilla node.js REST API App with CRUD operations from a .json file.
 
 **[your_project__name]** is a...
 
