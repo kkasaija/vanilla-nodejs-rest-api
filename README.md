@@ -27,9 +27,7 @@
 
 # 📖 [VANILLA NODE.JS REST API] <a name="about-project"></a>
 
-> A simple Vanilla node.js REST API App with CRUD operations from a .json file.
-
-**[your_project__name]** is a...
+**[ Vanilla Node.js REST API ]** Is a simple App with CRUD operations from a .json file.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -64,7 +62,7 @@
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
+- **[Server]**
 - **[key_feature_2]**
 - **[key_feature_3]**
 
@@ -102,41 +100,29 @@ Example command:
 
 ### Setup
 
-Clone this repository to your desired folder:
-
-<!--
-Example commands:
+Clone this repository to your desired folder e.g my-folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone git@github.com:Kasaija-Kenneth/vanilla-nodejs-rest-api.git
 ```
---->
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
 ```sh
-  cd my-project
-  gem install
+  cd vanilla-nodejs-rest-api
+  git install
 ```
---->
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
-  rails server
+  npm run dev
 ```
---->
 
 ### Run tests
 
@@ -172,9 +158,9 @@ Example:
 
 👤 **KASAIJA KENNETH**
 
-- GitHub: [Github](https://github.com/Kasaija-Kenneth)
-- Twitter: [Twitter](https://twitter.com/kenn_ug)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/kasaija-kenneth)
+- [Github](https://github.com/Kasaija-Kenneth)
+- [Twitter](https://twitter.com/kenn_ug)
+- [LinkedIn](https://linkedin.com/in/kasaija-kenneth)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
