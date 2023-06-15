@@ -6,13 +6,18 @@ const { getProducts, getProduct } = require('./controllers/productController');
 
 //create server
 const server = http.createServer((req, res) => {
-  const path_name = url.parse(req.url).pathname;
-  if (path_name === '/products' && req.method === 'GET') {
+  if (req.url === '/products' && req.method === 'GET') {
     getProducts(req, res);
-  } else if (path_name.match(/\/products\/[0-9]+/) && req.method === 'GET') {
-    const id = path_name.split('/')[2];
+  }
+
+  //RegEx to determine which product to fetch
+  else if (req.url.match(/\/products\/[0-9]+/) && req.method === 'GET') {
+    const id = req.url.split('/')[2];
     getProduct(req, res, id);
-  } else {
+  }
+
+  // If no route matches
+  else {
     res.writeHead(404, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ message: 'Not found' }));
   }

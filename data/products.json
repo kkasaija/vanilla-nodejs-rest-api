@@ -16,5 +16,11 @@
     "name": "product3",
     "description": "product3 details",
     "price": 200.56
+  },
+  {
+    "id": "4",
+    "name": "product4",
+    "description": "product4 details",
+    "price": 100.23
   }
 ]
