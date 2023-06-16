@@ -1,8 +1,11 @@
 //This is the entry point of the application
 const http = require('http');
-const fs = require('fs');
 const url = require('url');
-const { getProducts, getProduct, createProduct } = require('./controllers/productController');
+const {
+  getProducts,
+  getProduct,
+  createProduct,
+} = require('./controllers/productController');
 
 //create server
 const server = http.createServer((req, res) => {

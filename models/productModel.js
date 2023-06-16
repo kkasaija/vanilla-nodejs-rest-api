@@ -1,6 +1,7 @@
 //model logic interacts with database / data
 const products = require('../data/products');
 const { v4: uuidv4 } = require('uuid');
+const { writeDataToFile } = require('../utils');
 
 // find all products
 const findAll = async () => products;
@@ -12,9 +13,12 @@ const findById = async (id) => {
 };
 
 //create new product
-const createProduct = async (product) => {
-  const newProduct = { id: uuidv4, ...product };
+const addProduct = async (product) => {
+  console.log('product: ', product);
+  const newProduct = { id: uuidv4(), ...product };
   products.push(newProduct);
+  writeDataToFile('./data/products.json', products);
+  return newProduct;
 };
 
-module.exports = { findAll, findById, createProduct };
+module.exports = { findAll, findById, addProduct };

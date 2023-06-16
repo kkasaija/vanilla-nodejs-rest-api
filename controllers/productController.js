@@ -1,4 +1,4 @@
-const { findAll, findById, createProduct } = require('../models/productModel');
+const { findAll, findById, addProduct } = require('../models/productModel');
 
 // Get all products from data file
 const getProducts = async (req, res) => {
@@ -30,6 +30,22 @@ const getProduct = async (req, res, id) => {
 //Add a product to file
 const createProduct = async (req, res) => {
   try {
+    let body = '';
+    req.on('data', (chunk) => {
+      body += chunk;
+    });
+
+    req.on('end', async () => {
+      const { title, description, price } = JSON.parse(body);
+      const product = {
+        title,
+        description,
+        price,
+      };
+      const newProduct = await addProduct(product);
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(newProduct));
+    });
   } catch (error) {
     console.log(error);
   }
