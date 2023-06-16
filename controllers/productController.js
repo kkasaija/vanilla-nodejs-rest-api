@@ -1,5 +1,6 @@
-const { findAll, findById } = require('../models/productModel');
+const { findAll, findById, createProduct } = require('../models/productModel');
 
+// Get all products from data file
 const getProducts = async (req, res) => {
   try {
     const products = await findAll();
@@ -10,6 +11,7 @@ const getProducts = async (req, res) => {
   }
 };
 
+//Get a product from data file
 const getProduct = async (req, res, id) => {
   try {
     const product = await findById(id);
@@ -25,4 +27,12 @@ const getProduct = async (req, res, id) => {
   }
 };
 
-module.exports = { getProducts, getProduct };
+//Add a product to file
+const createProduct = async (req, res) => {
+  try {
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports = { getProducts, getProduct, createProduct };
