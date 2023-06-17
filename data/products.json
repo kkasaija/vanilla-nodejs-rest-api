@@ -1,14 +1,26 @@
 [
   {
-    "id": "46cca9c0-b10e-4059-a614-0f3905cba88c",
-    "title": "product title",
-    "description": "product description",
-    "price": 1000.3
+    "id": 1686964850543,
+    "title": "product 2",
+    "description": "product2 description changed",
+    "price": 0.087
   },
   {
-    "id": "a29d8720-9c6c-4a8c-ae0f-2dab3d0f22b2",
-    "title": "first product",
-    "description": "first product description",
-    "price": 100.36
+    "id": 1686964895267,
+    "title": "product rty",
+    "description": "product617io4 description changed",
+    "price": 12.087
+  },
+  {
+    "id": 1686964928098,
+    "title": "product trialsvvvvvvcc",
+    "description": "product trials description changed",
+    "price": 18287667.087
+  },
+  {
+    "id": 1686966022074,
+    "title": "product trials",
+    "description": "product trials description changed",
+    "price": 182.087
   }
 ]

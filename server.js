@@ -5,6 +5,7 @@ const {
   getProducts,
   getProduct,
   createProduct,
+  updateProduct,
 } = require('./controllers/productController');
 
 //create server
@@ -22,6 +23,13 @@ const server = http.createServer((req, res) => {
   //Create product
   else if (req.url === '/products' && req.method === 'POST') {
     createProduct(req, res);
+  }
+
+  //Update product
+  else if (req.url.match(/\/products\/[0-9]+/) && req.method === 'PUT') {
+    const id = req.url.split('/')[2];
+    console.log('ID: ', id);
+    updateProduct(req, res, id);
   }
 
   // If no route matches

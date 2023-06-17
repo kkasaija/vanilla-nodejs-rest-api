@@ -170,9 +170,10 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ 1 ] **[Read Data]**
+- [ 2 ] **[Create Data]**
+- [ 3 ] **[Update Data]**
+- [ 4 ] **[Delete Data]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

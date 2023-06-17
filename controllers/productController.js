@@ -1,4 +1,9 @@
-const { findAll, findById, addProduct } = require('../models/productModel');
+const {
+  findAll,
+  findById,
+  addProduct,
+  editProduct,
+} = require('../models/productModel');
 
 // Get all products from data file
 const getProducts = async (req, res) => {
@@ -51,4 +56,38 @@ const createProduct = async (req, res) => {
   }
 };
 
-module.exports = { getProducts, getProduct, createProduct };
+const updateProduct = async (req, res, id) => {
+  try {
+    const product = await findById(id);
+
+    // product not available??
+    if (!product) {
+      res.writeHead(404, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ message: 'Product not found' }));
+    }
+
+    // product available?
+    else {
+      let body = '';
+      req.on('data', (chunk) => {
+        body += chunk;
+      });
+
+      req.on('end', async () => {
+        const { title, description, price } = JSON.parse(body);
+        const product = {
+          title: title || product.title,
+          description: description || product.description,
+          price: price || product.price,
+        };
+        const updatedProduct = await editProduct(parseInt(id), product);
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(updatedProduct));
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports = { getProducts, getProduct, createProduct, updateProduct };
