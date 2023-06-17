@@ -1,17 +1,17 @@
-//model logic interacts with database / data
-const products = require('../data/products');
+//Model logic interacts with database / data
+let products = require('../data/products');
 const { writeDataToFile } = require('../utils');
 
-// find all products
+//Find all products
 const findAll = async () => products;
 
-//find a single product
+//Find a single product
 const findById = async (id) => {
   const product = products.find((product) => product.id === parseInt(id));
   return product;
 };
 
-//create new product
+//Create new product
 const addProduct = async (product) => {
   const newProduct = { id: Date.now(), ...product };
   products.push(newProduct);
@@ -19,7 +19,7 @@ const addProduct = async (product) => {
   return newProduct;
 };
 
-//edit product
+//Edit product
 const editProduct = async (id, product) => {
   const index = products.findIndex((product) => product.id === parseInt(id));
   products[index] = { id: id, ...product };
@@ -27,4 +27,13 @@ const editProduct = async (id, product) => {
   return products[index];
 };
 
-module.exports = { findAll, findById, addProduct, editProduct };
+//Remove product
+const removeProduct = async (id) => {
+  writeDataToFile(
+    './data/products.json',
+    products.filter((product) => product.id !== parseInt(id))
+  );
+  return;
+};
+
+module.exports = { findAll, findById, addProduct, editProduct, removeProduct };

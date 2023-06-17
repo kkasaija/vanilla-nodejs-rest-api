@@ -3,6 +3,7 @@ const {
   findById,
   addProduct,
   editProduct,
+  removeProduct,
 } = require('../models/productModel');
 
 // Get all products from data file
@@ -90,4 +91,31 @@ const updateProduct = async (req, res, id) => {
   }
 };
 
-module.exports = { getProducts, getProduct, createProduct, updateProduct };
+const deleteProduct = async (req, res, id) => {
+  try {
+    const product = await findById(id);
+
+    // product not available??
+    if (!product) {
+      res.writeHead(404, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ message: 'Product not found' }));
+    }
+
+    // product available?
+    else {
+      await removeProduct(id);
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ message: `Product ${id} has been removed` }));
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports = {
+  getProducts,
+  getProduct,
+  createProduct,
+  updateProduct,
+  deleteProduct,
+};
