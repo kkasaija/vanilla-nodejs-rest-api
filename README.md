@@ -14,6 +14,7 @@
   - [Setup](#setup)
   - [Install](#install)
   - [Usage](#usage)
+    - [Api Endpoints](#endpoints)
   - [Run tests](#run-tests)
   - [Deployment](#deployment)
 - [👥 Authors](#authors)
@@ -123,6 +124,25 @@ To run the project, execute the following command:
 ```sh
   npm run dev
 ```
+
+#### Api Endpoints <a href="" id="endpoints"></a>
+
+> GET
+
+- http://127.0.0.1:8000/files
+- http://127.0.0.1:8000/files/id
+
+> POST
+
+- http://127.0.0.1:8000/files
+
+> PUT
+
+- http://127.0.0.1:8000/files/id
+
+> DELETE
+
+- http://127.0.0.1:8000/files/id
 
 ### Run tests
 

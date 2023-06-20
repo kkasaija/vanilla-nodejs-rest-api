@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.22",
+    "pg": "^8.11.0",
     "uuid": "^9.0.0"
   }
 }
