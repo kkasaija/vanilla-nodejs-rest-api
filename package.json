@@ -13,6 +13,10 @@
   "devDependencies": {
     "nodemon": "^2.0.22",
     "pg": "^8.11.0",
+    "pg-cursor": "^2.10.0",
     "uuid": "^9.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
   }
 }
