@@ -129,20 +129,20 @@ To run the project, execute the following command:
 
 > GET
 
-- http://127.0.0.1:8000/files
-- http://127.0.0.1:8000/files/id
+- http://127.0.0.1:5000/users
+- http://127.0.0.1:5000/users/id
 
 > POST
 
-- http://127.0.0.1:8000/files
+- http://127.0.0.1:5000/users
 
 > PUT
 
-- http://127.0.0.1:8000/files/id
+- http://127.0.0.1:5000/users/id
 
 > DELETE
 
-- http://127.0.0.1:8000/files/id
+- http://127.0.0.1:5000/users/id
 
 ### Run tests
 
